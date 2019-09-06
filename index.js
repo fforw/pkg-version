@@ -15,12 +15,27 @@ function readPackageJSON(p)
 const files = argv._;
 const update = !!argv.update;
 
-if (files.length < 2)
+if (argv.help)
+{
+    usage();
+    process.exit(0);
+}
+
+function usage()
 {
     console.log(`
-Usage: pkg-version ${chalk.dim("<src>")} ${chalk.dim("<dst>")} [ ${chalk.dim("<dst2>")} ... ]
+Usage: pkg-version ${chalk.dim("<src>")} ${chalk.dim("<dst>")} [ ${chalk.dim("<dst2>")} ... ] [--update]
 
-Compares package versions`);
+Compares package versions from of one package.json with the versions in multiple other versions. If --update is given, copy
+newer versions of the packages in the first package.json to the others.
+
+`);
+}
+
+
+if (files.length < 2)
+{
+    usage();
     console.log(chalk.red("\nERROR: Need package.json files\n"));
     process.exit(1);
 }
