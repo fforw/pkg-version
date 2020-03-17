@@ -12,6 +12,6 @@
     "keywords": ["package-json", "version"],
     "dependencies": {
         "chalk": "^2.4.2",
-        "minimist": "^1.2.0"
+        "minimist": "^1.2.2"
     }
 }
