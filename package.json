@@ -1,6 +1,6 @@
 {
     "name": "@fforw/pkg-version",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "index.js",
     "author": "Sven Helmberger",
     "repository": "fforw/pkg-version",
@@ -9,9 +9,12 @@
     "bin": {
         "pkg-version": "index.js"
     },
-    "keywords": ["package-json", "version"],
+    "keywords": [
+        "package-json",
+        "version"
+    ],
     "dependencies": {
-        "chalk": "^2.4.2",
-        "minimist": "^1.2.0"
+        "chalk": "^3.0.0",
+        "minimist": "^1.2.5"
     }
 }
